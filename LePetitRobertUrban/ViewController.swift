@@ -9,14 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var i=0
+    @IBOutlet weak var startButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-
+    
+   @IBAction func startButtonAction(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "toMenuControllerSegue", sender: nil)
+        
+    }
+    
+    
 
 }
 
