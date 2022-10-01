@@ -16,6 +16,16 @@
 		2F53E86D28E7429C0038C064 /* LePetitRobertUrbanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E86C28E7429C0038C064 /* LePetitRobertUrbanTests.swift */; };
 		2F53E87728E7429C0038C064 /* LePetitRobertUrbanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E87628E7429C0038C064 /* LePetitRobertUrbanUITests.swift */; };
 		2F53E87928E7429C0038C064 /* LePetitRobertUrbanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E87828E7429C0038C064 /* LePetitRobertUrbanUITestsLaunchTests.swift */; };
+		2F53E89028E817FD0038C064 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E88F28E817FD0038C064 /* MenuController.swift */; };
+		2F53E89128E817FD0038C064 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E88F28E817FD0038C064 /* MenuController.swift */; };
+		2F53E89228E817FD0038C064 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E88F28E817FD0038C064 /* MenuController.swift */; };
+		2F53E89428E81B500038C064 /* UrbanAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E89328E81B500038C064 /* UrbanAPI.swift */; };
+		2F53E89628E81EF80038C064 /* RandomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E89528E81EF80038C064 /* RandomController.swift */; };
+		2F53E89828E82B480038C064 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E89728E82B480038C064 /* Word.swift */; };
+		2F53E89A28E82B610038C064 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E89928E82B610038C064 /* Definition.swift */; };
+		A1EB68A73DCD892891AB8BBA /* Pods_LePetitRobertUrbanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D5E91CB754FF9D3F47E29E /* Pods_LePetitRobertUrbanTests.framework */; };
+		B32AC5C040E18A0CF442E03B /* Pods_LePetitRobertUrban.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C555DEAFC2F874AC9B7334 /* Pods_LePetitRobertUrban.framework */; };
+		E4002B62691E61ADF3D2CCA8 /* Pods_LePetitRobertUrban_LePetitRobertUrbanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4D7DBE0795F5B0DE582301 /* Pods_LePetitRobertUrban_LePetitRobertUrbanUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +59,20 @@
 		2F53E87228E7429C0038C064 /* LePetitRobertUrbanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LePetitRobertUrbanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F53E87628E7429C0038C064 /* LePetitRobertUrbanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LePetitRobertUrbanUITests.swift; sourceTree = "<group>"; };
 		2F53E87828E7429C0038C064 /* LePetitRobertUrbanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LePetitRobertUrbanUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2F53E88F28E817FD0038C064 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		2F53E89328E81B500038C064 /* UrbanAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbanAPI.swift; sourceTree = "<group>"; };
+		2F53E89528E81EF80038C064 /* RandomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomController.swift; sourceTree = "<group>"; };
+		2F53E89728E82B480038C064 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		2F53E89928E82B610038C064 /* Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
+		30C555DEAFC2F874AC9B7334 /* Pods_LePetitRobertUrban.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LePetitRobertUrban.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C4D7DBE0795F5B0DE582301 /* Pods_LePetitRobertUrban_LePetitRobertUrbanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LePetitRobertUrban_LePetitRobertUrbanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		482209D4C287DE47591B6D84 /* Pods-LePetitRobertUrbanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LePetitRobertUrbanTests.release.xcconfig"; path = "Target Support Files/Pods-LePetitRobertUrbanTests/Pods-LePetitRobertUrbanTests.release.xcconfig"; sourceTree = "<group>"; };
+		4D0A8817876615AC9C23B9D9 /* Pods-LePetitRobertUrban.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LePetitRobertUrban.debug.xcconfig"; path = "Target Support Files/Pods-LePetitRobertUrban/Pods-LePetitRobertUrban.debug.xcconfig"; sourceTree = "<group>"; };
+		59D5E91CB754FF9D3F47E29E /* Pods_LePetitRobertUrbanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LePetitRobertUrbanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76BB0A015151162ACA5C05AD /* Pods-LePetitRobertUrban-LePetitRobertUrbanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LePetitRobertUrban-LePetitRobertUrbanUITests.debug.xcconfig"; path = "Target Support Files/Pods-LePetitRobertUrban-LePetitRobertUrbanUITests/Pods-LePetitRobertUrban-LePetitRobertUrbanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8E5C4AC7751FAC7B7E50007A /* Pods-LePetitRobertUrban-LePetitRobertUrbanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LePetitRobertUrban-LePetitRobertUrbanUITests.release.xcconfig"; path = "Target Support Files/Pods-LePetitRobertUrban-LePetitRobertUrbanUITests/Pods-LePetitRobertUrban-LePetitRobertUrbanUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CE897DB7F25A9F38449CB936 /* Pods-LePetitRobertUrban.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LePetitRobertUrban.release.xcconfig"; path = "Target Support Files/Pods-LePetitRobertUrban/Pods-LePetitRobertUrban.release.xcconfig"; sourceTree = "<group>"; };
+		D0A6318CA73276650EA29FF0 /* Pods-LePetitRobertUrbanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LePetitRobertUrbanTests.debug.xcconfig"; path = "Target Support Files/Pods-LePetitRobertUrbanTests/Pods-LePetitRobertUrbanTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B32AC5C040E18A0CF442E03B /* Pods_LePetitRobertUrban.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1EB68A73DCD892891AB8BBA /* Pods_LePetitRobertUrbanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4002B62691E61ADF3D2CCA8 /* Pods_LePetitRobertUrban_LePetitRobertUrbanUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +110,8 @@
 				2F53E86B28E7429C0038C064 /* LePetitRobertUrbanTests */,
 				2F53E87528E7429C0038C064 /* LePetitRobertUrbanUITests */,
 				2F53E85328E742990038C064 /* Products */,
+				717E7F9F915FC9D724357CBE /* Pods */,
+				3640CA4F40B5A16DE3C8CF48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +128,10 @@
 		2F53E85428E742990038C064 /* LePetitRobertUrban */ = {
 			isa = PBXGroup;
 			children = (
+				2F53E88828E814180038C064 /* model */,
+				2F53E88728E8140F0038C064 /* view */,
+				2F53E88628E814040038C064 /* api */,
+				2F53E88528E813FD0038C064 /* controller */,
 				2F53E85528E742990038C064 /* AppDelegate.swift */,
 				2F53E85728E742990038C064 /* SceneDelegate.swift */,
 				2F53E85928E742990038C064 /* ViewController.swift */,
@@ -127,6 +160,62 @@
 			path = LePetitRobertUrbanUITests;
 			sourceTree = "<group>";
 		};
+		2F53E88528E813FD0038C064 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F53E88F28E817FD0038C064 /* MenuController.swift */,
+				2F53E89528E81EF80038C064 /* RandomController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		2F53E88628E814040038C064 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				2F53E89328E81B500038C064 /* UrbanAPI.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		2F53E88728E8140F0038C064 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		2F53E88828E814180038C064 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2F53E89728E82B480038C064 /* Word.swift */,
+				2F53E89928E82B610038C064 /* Definition.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		3640CA4F40B5A16DE3C8CF48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30C555DEAFC2F874AC9B7334 /* Pods_LePetitRobertUrban.framework */,
+				3C4D7DBE0795F5B0DE582301 /* Pods_LePetitRobertUrban_LePetitRobertUrbanUITests.framework */,
+				59D5E91CB754FF9D3F47E29E /* Pods_LePetitRobertUrbanTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		717E7F9F915FC9D724357CBE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D0A8817876615AC9C23B9D9 /* Pods-LePetitRobertUrban.debug.xcconfig */,
+				CE897DB7F25A9F38449CB936 /* Pods-LePetitRobertUrban.release.xcconfig */,
+				76BB0A015151162ACA5C05AD /* Pods-LePetitRobertUrban-LePetitRobertUrbanUITests.debug.xcconfig */,
+				8E5C4AC7751FAC7B7E50007A /* Pods-LePetitRobertUrban-LePetitRobertUrbanUITests.release.xcconfig */,
+				D0A6318CA73276650EA29FF0 /* Pods-LePetitRobertUrbanTests.debug.xcconfig */,
+				482209D4C287DE47591B6D84 /* Pods-LePetitRobertUrbanTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F53E87C28E7429C0038C064 /* Build configuration list for PBXNativeTarget "LePetitRobertUrban" */;
 			buildPhases = (
+				4D888B88B67496C18D6304EB /* [CP] Check Pods Manifest.lock */,
 				2F53E84E28E742990038C064 /* Sources */,
 				2F53E84F28E742990038C064 /* Frameworks */,
 				2F53E85028E742990038C064 /* Resources */,
+				06B06573CE55E1724F8B6B6E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +242,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F53E87F28E7429C0038C064 /* Build configuration list for PBXNativeTarget "LePetitRobertUrbanTests" */;
 			buildPhases = (
+				BEBF6459A061DC06C9B1A6D6 /* [CP] Check Pods Manifest.lock */,
 				2F53E86428E7429C0038C064 /* Sources */,
 				2F53E86528E7429C0038C064 /* Frameworks */,
 				2F53E86628E7429C0038C064 /* Resources */,
@@ -169,9 +261,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F53E88228E7429C0038C064 /* Build configuration list for PBXNativeTarget "LePetitRobertUrbanUITests" */;
 			buildPhases = (
+				778B308C3FF23C188EE68BD0 /* [CP] Check Pods Manifest.lock */,
 				2F53E86E28E7429C0038C064 /* Sources */,
 				2F53E86F28E7429C0038C064 /* Frameworks */,
 				2F53E87028E7429C0038C064 /* Resources */,
+				4038FA110DC6F624B1E5CD78 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,11 +347,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06B06573CE55E1724F8B6B6E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LePetitRobertUrban/Pods-LePetitRobertUrban-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LePetitRobertUrban/Pods-LePetitRobertUrban-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LePetitRobertUrban/Pods-LePetitRobertUrban-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4038FA110DC6F624B1E5CD78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LePetitRobertUrban-LePetitRobertUrbanUITests/Pods-LePetitRobertUrban-LePetitRobertUrbanUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LePetitRobertUrban-LePetitRobertUrbanUITests/Pods-LePetitRobertUrban-LePetitRobertUrbanUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LePetitRobertUrban-LePetitRobertUrbanUITests/Pods-LePetitRobertUrban-LePetitRobertUrbanUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D888B88B67496C18D6304EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LePetitRobertUrban-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		778B308C3FF23C188EE68BD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LePetitRobertUrban-LePetitRobertUrbanUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEBF6459A061DC06C9B1A6D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LePetitRobertUrbanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2F53E84E28E742990038C064 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F53E89628E81EF80038C064 /* RandomController.swift in Sources */,
+				2F53E89828E82B480038C064 /* Word.swift in Sources */,
+				2F53E89428E81B500038C064 /* UrbanAPI.swift in Sources */,
+				2F53E89028E817FD0038C064 /* MenuController.swift in Sources */,
+				2F53E89A28E82B610038C064 /* Definition.swift in Sources */,
 				2F53E85A28E742990038C064 /* ViewController.swift in Sources */,
 				2F53E85628E742990038C064 /* AppDelegate.swift in Sources */,
 				2F53E85828E742990038C064 /* SceneDelegate.swift in Sources */,
@@ -268,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F53E89128E817FD0038C064 /* MenuController.swift in Sources */,
 				2F53E86D28E7429C0038C064 /* LePetitRobertUrbanTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F53E87728E7429C0038C064 /* LePetitRobertUrbanUITests.swift in Sources */,
+				2F53E89228E817FD0038C064 /* MenuController.swift in Sources */,
 				2F53E87928E7429C0038C064 /* LePetitRobertUrbanUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +638,7 @@
 		};
 		2F53E87D28E7429C0038C064 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0A8817876615AC9C23B9D9 /* Pods-LePetitRobertUrban.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -461,6 +666,7 @@
 		};
 		2F53E87E28E7429C0038C064 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE897DB7F25A9F38449CB936 /* Pods-LePetitRobertUrban.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,6 +694,7 @@
 		};
 		2F53E88028E7429C0038C064 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0A6318CA73276650EA29FF0 /* Pods-LePetitRobertUrbanTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +719,7 @@
 		};
 		2F53E88128E7429C0038C064 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 482209D4C287DE47591B6D84 /* Pods-LePetitRobertUrbanTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +744,7 @@
 		};
 		2F53E88328E7429C0038C064 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76BB0A015151162ACA5C05AD /* Pods-LePetitRobertUrban-LePetitRobertUrbanUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -558,6 +767,7 @@
 		};
 		2F53E88428E7429C0038C064 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E5C4AC7751FAC7B7E50007A /* Pods-LePetitRobertUrban-LePetitRobertUrbanUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
