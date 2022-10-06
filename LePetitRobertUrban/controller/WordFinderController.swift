@@ -12,30 +12,31 @@ import Foundation
 
 class WordFinderController: UITableViewController {
 
-
+    var definitions: [Definition] = []
     
-    var definitions: [Definition] = [Definition]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Liste de definitions"
-        refreshDefinitionList()
-    }
-      
-    func refreshDefinitionList() {
+        
         self.definitions.removeAll()
         let urbanAPI = UrbanAPI()
-        urbanAPI.getRandomWord().done { word in
+        urbanAPI.getWord(searchWord: "wat").done { word in
             self.definitions = word.definitions
+            self.title = self.definitions[0].word
             self.tableView.reloadData()
+            
+            for i in 0...self.definitions.count-1{
+                print(self.definitions[i].definition)
+            }
         }
+         
     }
-      
       
       
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "DefinitionsCell")
           
-        cell.textLabel?.text = self.definitions[indexPath.row].word
+        cell.textLabel?.text = self.definitions[indexPath.row].definition
+        
           
         return cell
     }

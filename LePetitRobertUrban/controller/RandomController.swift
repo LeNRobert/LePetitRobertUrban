@@ -27,6 +27,10 @@ class RandomController: UIViewController {
             self.titleLabel.text = word.word
             self.definitionLabel.text = word.definitions[0].definition
             self.exempleLabel.text = word.definitions[0].exemple
+            print("#######")
+            print(word.word)
+            print(word.definitions[0].definition)
+            print(word.definitions[0].exemple)
         }
         
         

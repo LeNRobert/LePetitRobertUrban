@@ -38,9 +38,15 @@ class UrbanAPI{
                 print(json)
                 let word = Word(word: searchWord)
                 
-                let definition: Definition = Definition(word: json["list"][0]["word"].stringValue, definition: json["list"][0]["definition"].stringValue, exemple: json["list"][0]["example"].stringValue)
                 
-                word.definitions.append(definition)
+                let  jsonLength = json["list"].count
+                for i in 0...jsonLength{
+                    print(json["list"][i]["definition"].stringValue)
+                    var definition: Definition = Definition(word: json["list"][i]["word"].stringValue, definition: json["list"][i]["definition"].stringValue, exemple: json["list"][i]["example"].stringValue)
+                    word.definitions.append(definition)
+                }
+                
+                
                 seal.fulfill(word)
                 
             }
@@ -64,9 +70,13 @@ class UrbanAPI{
                 print(json)
                 let word = Word(word:  json["list"][0]["word"].stringValue)
                 
-                let definition: Definition = Definition(word: json["list"][0]["word"].stringValue, definition: json["list"][0]["definition"].stringValue, exemple: json["list"][0]["example"].stringValue)
-                
-                word.definitions.append(definition)
+ 
+                for i in 0...json["list"].count{
+                    print(json["list"][i]["definition"].stringValue)
+                    var definition: Definition = Definition(word: json["list"][i]["word"].stringValue, definition: json["list"][i]["definition"].stringValue, exemple: json["list"][i]["example"].stringValue)
+                    word.definitions.append(definition)
+                }
+
                 seal.fulfill(word)
             }
         }
