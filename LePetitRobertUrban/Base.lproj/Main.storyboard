@@ -93,27 +93,28 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJH-1B-h0x">
-                                            <rect key="frame" x="20" y="11" width="41.5" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJH-1B-h0x">
+                                            <rect key="frame" x="30" y="21" width="354" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iz1-vU-Jow">
-                                            <rect key="frame" x="20" y="31.5" width="374" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="374" id="cSl-NJ-j0T"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iz1-vU-Jow">
+                                            <rect key="frame" x="30" y="51.5" width="374" height="16"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="GJH-1B-h0x" firstAttribute="leading" secondItem="xFR-sU-0pd" secondAttribute="leadingMargin" id="Iff-n3-f1j"/>
-                                        <constraint firstItem="GJH-1B-h0x" firstAttribute="top" secondItem="xFR-sU-0pd" secondAttribute="topMargin" id="LM4-nA-Rgz"/>
-                                        <constraint firstItem="iz1-vU-Jow" firstAttribute="trailing" secondItem="xFR-sU-0pd" secondAttribute="trailingMargin" id="VZ0-lP-UZb"/>
-                                        <constraint firstItem="iz1-vU-Jow" firstAttribute="top" secondItem="GJH-1B-h0x" secondAttribute="bottom" id="jfa-DL-34M"/>
+                                        <constraint firstItem="iz1-vU-Jow" firstAttribute="top" secondItem="GJH-1B-h0x" secondAttribute="bottom" constant="10" id="4l4-ES-Qyt"/>
+                                        <constraint firstItem="iz1-vU-Jow" firstAttribute="trailing" secondItem="xFR-sU-0pd" secondAttribute="trailingMargin" constant="10" id="ABc-bi-HQM"/>
+                                        <constraint firstItem="iz1-vU-Jow" firstAttribute="top" secondItem="GJH-1B-h0x" secondAttribute="bottom" constant="10" id="SsW-5g-LHW"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="iz1-vU-Jow" secondAttribute="bottom" constant="10" id="Vgj-mn-eLP"/>
+                                        <constraint firstItem="GJH-1B-h0x" firstAttribute="top" secondItem="xFR-sU-0pd" secondAttribute="topMargin" constant="10" id="ZXF-hd-mNk"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="GJH-1B-h0x" secondAttribute="trailing" constant="10" id="hAl-2m-3L5"/>
+                                        <constraint firstItem="GJH-1B-h0x" firstAttribute="leading" secondItem="xFR-sU-0pd" secondAttribute="leadingMargin" constant="10" id="qvT-0R-Gtw"/>
+                                        <constraint firstItem="iz1-vU-Jow" firstAttribute="leading" secondItem="xFR-sU-0pd" secondAttribute="leadingMargin" constant="10" id="sh9-MV-LoF"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -141,6 +142,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AbY-4v-gfQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                            <color key="textColor" systemColor="systemBlueColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="rh7-b5-pNv" kind="relationship" relationship="rootViewController" id="zc3-sM-Ghr"/>
@@ -207,6 +212,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

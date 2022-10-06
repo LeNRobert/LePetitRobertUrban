@@ -23,7 +23,8 @@ class RandomController: UIViewController {
         
         let urbanAPI = UrbanAPI()
         
-        urbanAPI.getRandomWord().done { word in
+        let randomWord = urbanAPI.getRandomWord()
+            /*.done { word in
             self.titleLabel.text = word.word
             self.definitionLabel.text = word.definitions[0].definition
             self.exempleLabel.text = word.definitions[0].exemple
@@ -32,7 +33,7 @@ class RandomController: UIViewController {
             print(word.definitions[0].definition)
             print(word.definitions[0].exemple)
         }
-        
+        */
         
        
         /*

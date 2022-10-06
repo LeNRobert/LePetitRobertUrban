@@ -55,30 +55,23 @@ class UrbanAPI{
         
     }
     
-    func getRandomWord() -> Promise<Word>{
-        return Promise { seal in
-            
-            // On fait l'appel dans la promesse
-            let headers: HTTPHeaders = [
-                "X-RapidAPI-Key": "d76b23bb01mshc93ea5954cb8cbep1e91f0jsn9cf4154fc556",
-                "X-RapidAPI-Host": "mashape-community-urban-dictionary.p.rapidapi.com"
-            ]
-            
-            AF.request("https://api.urbandictionary.com/v0/random", headers: headers).response { response in
-               let json = JSON(response.data)
-                
-                print(json)
-                let word = Word(word:  json["list"][0]["word"].stringValue)
-                
- 
-                for i in 0...json["list"].count{
-                    print(json["list"][i]["definition"].stringValue)
-                    var definition: Definition = Definition(word: json["list"][i]["word"].stringValue, definition: json["list"][i]["definition"].stringValue, exemple: json["list"][i]["example"].stringValue)
-                    word.definitions.append(definition)
-                }
+    func getRandomWord() -> String {
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "https://api.urbandictionary.com/v0/random")! as URL,
+                                                cachePolicy: .useProtocolCachePolicy,
+                                            timeoutInterval: 10.0)
 
-                seal.fulfill(word)
+
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error)
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                let randomWord = JSON(data)["list"][0]["word"].stringValue
             }
-        }
+        })
+        dataTask.resume()
+        return ""
     }
 }
