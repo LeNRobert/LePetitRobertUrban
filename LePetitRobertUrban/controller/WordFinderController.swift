@@ -10,6 +10,14 @@ import Alamofire
 import SwiftyJSON
 import Foundation
 
+class DefinitionTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var definitionLabel: UILabel!
+    
+    
+    @IBOutlet weak var exempleLabel: UILabel!
+}
+
 class WordFinderController: UITableViewController {
 
     var definitions: [Definition] = []
@@ -33,10 +41,13 @@ class WordFinderController: UITableViewController {
       
       
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "DefinitionsCell")
-          
-        cell.textLabel?.text = self.definitions[indexPath.row].definition
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DefinitionCell", for: indexPath) as! DefinitionTableViewCell
+        
+        let def = self.definitions[indexPath.row]
+            
+        cell.definitionLabel.text = def.definition
+        cell.exempleLabel.text = def.exemple
           
         return cell
     }
