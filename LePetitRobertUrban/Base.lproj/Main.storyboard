@@ -58,6 +58,15 @@
                                     <segue destination="ztm-bb-6Hf" kind="show" id="5V7-2Y-ff8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4Y-IJ-pkz">
+                                <rect key="frame" x="228" y="424" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="xZU-d4-eY4" kind="show" id="MLE-Y6-Anf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mmZ-Nh-rHB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -73,7 +82,7 @@
             <objects>
                 <tableViewController id="rh7-b5-pNv" customClass="WordFinderController" customModule="LePetitRobertUrban" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Tqx-WQ-CEU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -101,8 +110,9 @@
         <scene sceneID="Lc9-GR-Slh">
             <objects>
                 <navigationController id="xZU-d4-eY4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SJW-9q-lLu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AbY-4v-gfQ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

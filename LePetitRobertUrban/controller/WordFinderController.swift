@@ -5,8 +5,10 @@
 //  Created by Nam-Robert Le on 06/10/2022.
 //
 
-import Foundation
 import UIKit
+import Alamofire
+import SwiftyJSON
+import Foundation
 
 class WordFinderController: UITableViewController {
 
@@ -30,40 +32,44 @@ class WordFinderController: UITableViewController {
       
       
       
-    override func tableView( tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "DefinitionsCell")
           
-        cell.textLabel?.text = self.cartes[indexPath.row].name
+        cell.textLabel?.text = self.definitions[indexPath.row].word
           
         return cell
     }
       
-    override func tableView( tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView( _ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return cartes.count
+        return definitions.count
     }
       
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
       
-      
+    /*
+     // a enlever ou remettre
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-          self.performSegue(withIdentifier: "toCarteClassDescription", sender: cartes[indexPath.row])
+          self.performSegue(withIdentifier: "toDefinitionClassDescription", sender: definitions[indexPath.row])
     }
-      
-      
+    */
+    
+    
+    /*
+    // a enlever ou remettre
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toCarteClassDescription" {
+        if segue.identifier == "toDefinitionClassDescription" {
               
-            let carte = sender as? Carte
+            let definition = sender as? Definition
               
-            if let viewControllerDestination = segue.destination as? CarteDesciptionClassController {
-                viewControllerDestination.carte = carte
+            if let viewControllerDestination = segue.destination as? DefinitionDesciptionClassController {
+                viewControllerDestination.definition = definition
             }
               
         }
     }
-    
+    */
     
 }
