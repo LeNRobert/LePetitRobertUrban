@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F1692FE28EEC49600F93A3B /* WordFinderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1692FD28EEC49600F93A3B /* WordFinderController.swift */; };
 		2F53E85628E742990038C064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E85528E742990038C064 /* AppDelegate.swift */; };
 		2F53E85828E742990038C064 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E85728E742990038C064 /* SceneDelegate.swift */; };
 		2F53E85A28E742990038C064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E85928E742990038C064 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F1692FD28EEC49600F93A3B /* WordFinderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFinderController.swift; sourceTree = "<group>"; };
 		2F53E85228E742990038C064 /* LePetitRobertUrban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LePetitRobertUrban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F53E85528E742990038C064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F53E85728E742990038C064 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				2F53E88F28E817FD0038C064 /* MenuController.swift */,
 				2F53E89528E81EF80038C064 /* RandomController.swift */,
+				2F1692FD28EEC49600F93A3B /* WordFinderController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				2F53E89628E81EF80038C064 /* RandomController.swift in Sources */,
 				2F53E89828E82B480038C064 /* Word.swift in Sources */,
 				2F53E89428E81B500038C064 /* UrbanAPI.swift in Sources */,
+				2F1692FE28EEC49600F93A3B /* WordFinderController.swift in Sources */,
 				2F53E89028E817FD0038C064 /* MenuController.swift in Sources */,
 				2F53E89A28E82B610038C064 /* Definition.swift in Sources */,
 				2F53E85A28E742990038C064 /* ViewController.swift in Sources */,

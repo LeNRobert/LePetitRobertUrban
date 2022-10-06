@@ -9,12 +9,11 @@ import Foundation
 
 class Word{
     
-    var definitions: [Definition] = []
-    var word:String
+    var definitions: [Definition] = [Definition]()
+    var word: String
     
     init (word:String){
         self.word = word
-    
-        
     }
+    
 }

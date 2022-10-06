@@ -22,10 +22,27 @@ class RandomController: UIViewController {
         // Do any additional setup after loading the view.
         
         let urbanAPI = UrbanAPI()
-        let word  = urbanAPI.getWord(searchWord: "wat")
+        
+        urbanAPI.getRandomWord().done { word in
+            self.titleLabel.text = word.word
+            self.definitionLabel.text = word.definitions[0].definition
+            self.exempleLabel.text = word.definitions[0].exemple
+        }
         
         
+       
         /*
+         HearststoneApi.getCarts().done { cartes in
+                     
+                     self.nom.text = cartes[i].name
+                     if let url = URL(string: cartes[i].image),let imgData = try? Data(contentsOf: url) {
+                        let img = UIImage(data: imgData)
+                        self.img.image = img
+                     }
+                 
+                 }
+         
+         
         titleLabel.text = word.word
         definitionLabel.text = word.definitions[0].definition
         exempleLabel.text = word.definitions[0].exemple
