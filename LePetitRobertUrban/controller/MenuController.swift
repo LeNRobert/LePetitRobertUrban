@@ -7,22 +7,32 @@
 
 import UIKit
 
-class MenuController: UIViewController {
+class MenuController: UIViewController, UISearchBarDelegate {
     var wordToFound = "404"
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    var searchWord = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        searchBar.delegate = self
+
     }
     
     
 
     @IBAction func randomButtonAction(_ sender: Any) {
         
-        UrbanAPI.getRandomWord().done(on: .main, { word in
-            self.wordToFound = word
-        })
-        
+        Task {
+            await UrbanAPI.getRandomWord().done(on: .main, { word in
+                self.wordToFound = word
+            })
+        }
+
         self.performSegue(withIdentifier: "toNavigationController", sender: nil)
 
     }
@@ -42,6 +52,20 @@ class MenuController: UIViewController {
                 }
             }
         }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+        self.searchWord = searchText
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if searchWord != ""{
+            print(searchWord)
+            wordToFound = self.searchWord
+            
+            self.performSegue(withIdentifier: "toNavigationController", sender: nil)
+        }
+
     }
     
 }

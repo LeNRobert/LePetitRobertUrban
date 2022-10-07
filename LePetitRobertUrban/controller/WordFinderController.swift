@@ -20,27 +20,49 @@ class DefinitionTableViewCell: UITableViewCell {
 
 
 
-class WordFinderController: UITableViewController {
+class WordFinderController: UITableViewController, UISearchBarDelegate {
     
-    var wordToFound = "404"
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    @IBOutlet weak var shuffleImage: UIImageView!
+    
+    
+    var wordToFound = ""
 
     var definitions: [Definition] = []
+    
+    var searchBarText = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchBar.delegate = self
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        shuffleImage.isUserInteractionEnabled = true
+        shuffleImage.addGestureRecognizer(tapGestureRecognizer)
+        
+        
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+            if self.wordToFound != "" {
+                timer.invalidate()
+            }
+        }
         self.refreshDefList()
     }
     
-    func refreshDefList() {
+    func refreshDefList(){
         self.definitions.removeAll()
-        UrbanAPI.getWord(searchWord: wordToFound).done { word in
-            self.definitions = word.definitions
-            self.title = self.definitions[0].word
-            self.tableView.reloadData()
-            
-            for i in 0...self.definitions.count-1{
-                print(self.definitions[i].definition)
+        Task {
+            await UrbanAPI.getWord(searchWord: wordToFound).done { word in
+                self.definitions = word.definitions
+                self.title = self.definitions[0].word
+                self.tableView.reloadData()
+                
+                for i in 0...self.definitions.count-1{
+                    print(self.definitions[i].definition)
+                }
             }
         }
     }
@@ -52,8 +74,8 @@ class WordFinderController: UITableViewController {
         
         let def = self.definitions[indexPath.row]
             
-        cell.definitionLabel.text = def.definition
-        cell.exempleLabel.text = def.exemple
+        cell.definitionLabel.text = def.definition.replacingOccurrences(of: "[", with: "").replacingOccurrences(of: "]", with: "")
+        cell.exempleLabel.text = def.exemple.replacingOccurrences(of: "[", with: "").replacingOccurrences(of: "]", with: "")
           
         return cell
     }
@@ -67,27 +89,30 @@ class WordFinderController: UITableViewController {
         return 1
     }
       
-    /*
-     // a enlever ou remettre
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-          self.performSegue(withIdentifier: "toDefinitionClassDescription", sender: definitions[indexPath.row])
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+        searchBarText = searchText
     }
-    */
     
-    
-    /*
-    // a enlever ou remettre
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toDefinitionClassDescription" {
-              
-            let definition = sender as? Definition
-              
-            if let viewControllerDestination = segue.destination as? DefinitionDesciptionClassController {
-                viewControllerDestination.definition = definition
-            }
-              
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if searchBarText != ""{
+            print(searchBarText)
+            wordToFound = searchBarText
+            
+            self.refreshDefList()
         }
     }
-    */
     
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+
+        // Your action
+        Task {
+            await UrbanAPI.getRandomWord().done(on: .main, { word in
+                self.wordToFound = word
+            })
+        }
+        self.refreshDefList()
+    }
 }

@@ -12,7 +12,7 @@ import PromiseKit
 
 class UrbanAPI{
     
-    static func getWord(searchWord: String)  -> Promise<Word>{
+    static func getWord(searchWord: String) async -> Promise<Word>{
         
         return Promise { seal in
             
@@ -23,8 +23,10 @@ class UrbanAPI{
                 "X-RapidAPI-Host": "mashape-community-urban-dictionary.p.rapidapi.com"
             ]
             
-            AF.request("https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=\(searchWord)", headers: headers).response { response in
+            AF.request("https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=\(searchWord.replacingOccurrences(of: " ", with: "+"))", headers: headers).response { response in
                let json = JSON(response.data)
+                print("search: \(searchWord)")
+                print("count: \(json["list"].count)")
                 
                 let word = Word(word: searchWord)
                 
@@ -43,8 +45,9 @@ class UrbanAPI{
         
     }
     
-    static func getRandomWord() -> Promise<String> {
-        var word = "404"
+    static func getRandomWord() async -> Promise<String> {
+        var word = ""
+        
         return Promise { seal in
             
             // On fait l'appel dans la promesse

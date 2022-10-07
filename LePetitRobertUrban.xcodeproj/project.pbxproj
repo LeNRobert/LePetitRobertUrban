@@ -21,7 +21,6 @@
 		2F53E89128E817FD0038C064 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E88F28E817FD0038C064 /* MenuController.swift */; };
 		2F53E89228E817FD0038C064 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E88F28E817FD0038C064 /* MenuController.swift */; };
 		2F53E89428E81B500038C064 /* UrbanAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E89328E81B500038C064 /* UrbanAPI.swift */; };
-		2F53E89628E81EF80038C064 /* RandomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E89528E81EF80038C064 /* RandomController.swift */; };
 		2F53E89828E82B480038C064 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E89728E82B480038C064 /* Word.swift */; };
 		2F53E89A28E82B610038C064 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F53E89928E82B610038C064 /* Definition.swift */; };
 		A1EB68A73DCD892891AB8BBA /* Pods_LePetitRobertUrbanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D5E91CB754FF9D3F47E29E /* Pods_LePetitRobertUrbanTests.framework */; };
@@ -63,7 +62,6 @@
 		2F53E87828E7429C0038C064 /* LePetitRobertUrbanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LePetitRobertUrbanUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2F53E88F28E817FD0038C064 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		2F53E89328E81B500038C064 /* UrbanAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbanAPI.swift; sourceTree = "<group>"; };
-		2F53E89528E81EF80038C064 /* RandomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomController.swift; sourceTree = "<group>"; };
 		2F53E89728E82B480038C064 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		2F53E89928E82B610038C064 /* Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
 		30C555DEAFC2F874AC9B7334 /* Pods_LePetitRobertUrban.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LePetitRobertUrban.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				2F53E88F28E817FD0038C064 /* MenuController.swift */,
-				2F53E89528E81EF80038C064 /* RandomController.swift */,
 				2F1692FD28EEC49600F93A3B /* WordFinderController.swift */,
 			);
 			path = controller;
@@ -458,7 +455,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F53E89628E81EF80038C064 /* RandomController.swift in Sources */,
 				2F53E89828E82B480038C064 /* Word.swift in Sources */,
 				2F53E89428E81B500038C064 /* UrbanAPI.swift in Sources */,
 				2F1692FE28EEC49600F93A3B /* WordFinderController.swift in Sources */,
