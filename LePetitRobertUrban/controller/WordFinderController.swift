@@ -16,6 +16,7 @@ class DefinitionTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var exempleLabel: UILabel!
+    
 }
 
 
@@ -43,6 +44,8 @@ class WordFinderController: UITableViewController, UISearchBarDelegate {
         shuffleImage.isUserInteractionEnabled = true
         shuffleImage.addGestureRecognizer(tapGestureRecognizer)
         
+
+        
         
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
             if self.wordToFound != "" {
@@ -51,6 +54,14 @@ class WordFinderController: UITableViewController, UISearchBarDelegate {
         }
         self.refreshDefList()
     }
+    
+    @IBAction func tapDefinitionLabel(gesture: UITapGestureRecognizer) {
+        
+    }
+    
+
+    
+    
     
     func refreshDefList(){
         self.definitions.removeAll()
@@ -70,14 +81,18 @@ class WordFinderController: UITableViewController, UISearchBarDelegate {
       
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DefinitionCell", for: indexPath) as! DefinitionTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DefinitionCell", for: indexPath) as! DefinitionTableViewCell
         
-        let def = self.definitions[indexPath.row]
+        let tapDef = UITapGestureRecognizer(target: self, action: #selector(self.tapDefinitionLabel))
+        cell.definitionLabel.isUserInteractionEnabled = true
+        cell.definitionLabel.addGestureRecognizer(tapDef)
             
-        cell.definitionLabel.text = def.definition.replacingOccurrences(of: "[", with: "").replacingOccurrences(of: "]", with: "")
-        cell.exempleLabel.text = def.exemple.replacingOccurrences(of: "[", with: "").replacingOccurrences(of: "]", with: "")
-          
-        return cell
+            let def = self.definitions[indexPath.row]
+                
+            cell.definitionLabel.text = def.definition.replacingOccurrences(of: "[", with: "").replacingOccurrences(of: "]", with: "")
+            cell.exempleLabel.text = def.exemple.replacingOccurrences(of: "[", with: "").replacingOccurrences(of: "]", with: "")
+              
+            return cell
     }
       
     override func tableView( _ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
