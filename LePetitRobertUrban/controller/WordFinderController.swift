@@ -18,7 +18,11 @@ class DefinitionTableViewCell: UITableViewCell {
     @IBOutlet weak var exempleLabel: UILabel!
 }
 
+
+
 class WordFinderController: UITableViewController {
+    
+    var wordToFound = "404"
 
     var definitions: [Definition] = []
     
@@ -26,8 +30,7 @@ class WordFinderController: UITableViewController {
         super.viewDidLoad()
         
         self.definitions.removeAll()
-        let urbanAPI = UrbanAPI()
-        urbanAPI.getWord(searchWord: "wat").done { word in
+        UrbanAPI.getWord(searchWord: wordToFound).done { word in
             self.definitions = word.definitions
             self.title = self.definitions[0].word
             self.tableView.reloadData()

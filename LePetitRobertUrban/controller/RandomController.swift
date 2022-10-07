@@ -15,25 +15,34 @@ class RandomController: UIViewController {
     @IBOutlet weak var definitionLabel: UILabel!
     
     @IBOutlet weak var exempleLabel: UILabel!
-        
+
+    
+    var randomWord = ""
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+                
+        UrbanAPI.getRandomWord().done(on: .main, { word in
+            self.randomWord = word
+            
+            UrbanAPI.getWord(searchWord: self.randomWord).done(on: .main, { word in
+                print("length : \(word.definitions.count)")
+                var length = word.definitions.count-2
+                if length < 0{
+                    length = 1
+                }
+                for i in 0...length{
+                    print("\(i) : \(word.word)")
+                    print(word.definitions[i].definition)
+                }
+            })
+            
+            
+        })
+
         
-        let urbanAPI = UrbanAPI()
-        
-        let randomWord = urbanAPI.getRandomWord()
-            /*.done { word in
-            self.titleLabel.text = word.word
-            self.definitionLabel.text = word.definitions[0].definition
-            self.exempleLabel.text = word.definitions[0].exemple
-            print("#######")
-            print(word.word)
-            print(word.definitions[0].definition)
-            print(word.definitions[0].exemple)
-        }
-        */
         
        
         /*
