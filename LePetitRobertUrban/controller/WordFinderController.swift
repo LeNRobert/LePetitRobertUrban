@@ -29,6 +29,10 @@ class WordFinderController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.refreshDefList()
+    }
+    
+    func refreshDefList() {
         self.definitions.removeAll()
         UrbanAPI.getWord(searchWord: wordToFound).done { word in
             self.definitions = word.definitions
@@ -39,7 +43,6 @@ class WordFinderController: UITableViewController {
                 print(self.definitions[i].definition)
             }
         }
-         
     }
       
       

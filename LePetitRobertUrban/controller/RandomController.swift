@@ -23,7 +23,7 @@ class RandomController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-                
+/*
         UrbanAPI.getRandomWord().done(on: .main, { word in
             self.randomWord = word
             
@@ -42,7 +42,7 @@ class RandomController: UIViewController {
             
         })
 
-        
+        */
         
        
         /*

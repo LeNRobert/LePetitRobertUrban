@@ -12,10 +12,11 @@ import PromiseKit
 
 class UrbanAPI{
     
-    static func getWord(searchWord: String) -> Promise<Word>{
+    static func getWord(searchWord: String)  -> Promise<Word>{
         
         return Promise { seal in
             
+
             // On fait l'appel dans la promesse
             let headers: HTTPHeaders = [
                 "X-RapidAPI-Key": "d76b23bb01mshc93ea5954cb8cbep1e91f0jsn9cf4154fc556",
@@ -32,17 +33,18 @@ class UrbanAPI{
                     var definition: Definition = Definition(word: json["list"][i]["word"].stringValue, definition: json["list"][i]["definition"].stringValue, exemple: json["list"][i]["example"].stringValue)
                     word.definitions.append(definition)
                 }
-
                 seal.fulfill(word)
+
                 
             }
+
         }
         
         
     }
     
-    static func getRandomWord()-> Promise<String>{
-        var word = ""
+    static func getRandomWord() -> Promise<String> {
+        var word = "404"
         return Promise { seal in
             
             // On fait l'appel dans la promesse
@@ -55,8 +57,9 @@ class UrbanAPI{
                let json = JSON(response.data)
                 word = json["list"][0]["word"].stringValue
                 seal.fulfill(word)
-                
+
             }
+
         }
     }
 }
