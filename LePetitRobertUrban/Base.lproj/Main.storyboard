@@ -49,33 +49,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5M-rC-E4R">
-                                <rect key="frame" x="171" y="210" width="74" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="random"/>
-                                <connections>
-                                    <action selector="randomButtonAction:" destination="INO-gF-1F8" eventType="touchUpInside" id="mhi-Wz-EyB"/>
-                                    <segue destination="xZU-d4-eY4" kind="show" id="aX5-v4-N9v"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4Y-IJ-pkz">
                                 <rect key="frame" x="228" y="424" width="67" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
-                                    <action selector="searhButtonAction:" destination="INO-gF-1F8" eventType="touchUpInside" id="LPH-bs-G1y"/>
+                                    <action selector="randomButtonAction:" destination="INO-gF-1F8" eventType="touchUpInside" id="2pU-nh-Y25"/>
                                     <segue destination="xZU-d4-eY4" kind="show" identifier="toNavigationController" id="MLE-Y6-Anf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iu-5W-zV3">
-                                <rect key="frame" x="138" y="572" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <action selector="randomButtonAction:" destination="INO-gF-1F8" eventType="touchUpInside" id="2rg-Co-CiP"/>
                                 </connections>
                             </button>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="57z-yc-sJ6">
@@ -110,7 +91,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <imageView key="tableFooterView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shuffle" catalog="system" highlightedImage="shuffle" id="LF7-LX-MmO">
-                            <rect key="frame" x="0.0" y="752.5" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="979.5" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
@@ -188,9 +169,6 @@
             <point key="canvasLocation" x="1019" y="905"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="MLE-Y6-Anf"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="shuffle" catalog="system" width="128" height="95"/>
         <systemColor name="systemBackgroundColor">
