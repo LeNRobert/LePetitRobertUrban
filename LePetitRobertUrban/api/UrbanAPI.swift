@@ -51,12 +51,8 @@ class UrbanAPI{
         return Promise { seal in
             
             // On fait l'appel dans la promesse
-            let headers: HTTPHeaders = [
-                "X-RapidAPI-Key": "d76b23bb01mshc93ea5954cb8cbep1e91f0jsn9cf4154fc556",
-                "X-RapidAPI-Host": "mashape-community-urban-dictionary.p.rapidapi.com"
-            ]
             
-            AF.request("https://api.urbandictionary.com/v0/random", headers: headers).response { response in
+            AF.request("https://api.urbandictionary.com/v0/random").response { response in
                let json = JSON(response.data)
                 word = json["list"][0]["word"].stringValue
                 seal.fulfill(word)
